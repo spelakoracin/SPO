@@ -1,6 +1,6 @@
 prog     START   0
 
-        LDCH     #97 
+        LDCH     #97 .naložimo ASCII znak a
         JSUB    fill
         JSUB    clear
 
