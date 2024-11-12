@@ -10,8 +10,8 @@ fak     START   0
 
 
 read    CLEAR   A
-        RD      #0xAA
-        COMP    #0x0D   .če je enako, smo prebrali CR
+        RD      #0xFA
+        COMP    #0x0A   .če je enako, smo prebrali LF
         JEQ     next
         SUB     #48
         COMP    #0
@@ -22,7 +22,7 @@ read    CLEAR   A
 
         
 
-next    RD      #0xAA   .preberemo še LF
+next    .RD      #0xFA   .preberemo še LF
         RMO     T,A
         CLEAR   T 
         DIV     #10
